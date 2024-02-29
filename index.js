@@ -5,10 +5,8 @@ const app = express();
 
 app.use(cors());
 app.get('/', (req, res) => {
-    console.log('GET /');
-    console.log('Request Headers:', req.headers);
-    console.log('Hello EzHost')
-    res.status(200).send('Hello EzHost');
+    console.log('[ ' +  new Date() + ' ] -' + ' GET / - ' + req.headers);
+    res.status(200).send('Hello EzHost ' + new Date());
 });
 
 app.listen(3000, (e)=> {
